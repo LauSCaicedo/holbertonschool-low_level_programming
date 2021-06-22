@@ -18,7 +18,7 @@ letter++;
 while (letterA <= 90)
 {
 putchar(letterA);
-letter++;
+letterA++;
 }
 putchar('\n');
 return (0);
