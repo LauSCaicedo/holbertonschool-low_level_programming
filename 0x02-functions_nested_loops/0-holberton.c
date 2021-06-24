@@ -10,7 +10,7 @@
 
 int main(void)
 {
-char paragraph[]= "Holberton";
+char paragraph[] = "Holberton";
 size_t i = 0;
 size_t arrayLength = strlen(paragraph);
 for (i = 0; i < arrayLength; i++)
