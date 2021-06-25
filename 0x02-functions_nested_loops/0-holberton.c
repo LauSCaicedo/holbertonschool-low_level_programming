@@ -1,6 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
-#include <string.h>
 
 /**
  * main - _putchar
@@ -10,13 +8,15 @@
 
 int main(void)
 {
-char paragraph[] = "Holberton";
-size_t i = 0;
-size_t arrayLength = strlen(paragraph);
-for (i = 0; i < arrayLength; i++)
-{
-putchar(paragraph[i]);
-}
-putchar('\n');
+_putchar('H');
+_putchar('o');
+_putchar('l');
+_putchar('b');
+_putchar('e');
+_putchar('r');
+_putchar('t');
+_putchar('o');
+_putchar('n');
+_putchar('\n');
 return (0);
 }
