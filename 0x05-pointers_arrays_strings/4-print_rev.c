@@ -14,7 +14,7 @@ for (a = 0; s[a] != '\0'; a++)
 {
 cont++;
 }
-for (a = cont; a >= '\0'; a--)
+for (a = cont; a >= 0; a--)
 {
 _putchar(s[a]);
 }
