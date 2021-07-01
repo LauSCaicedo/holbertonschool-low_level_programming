@@ -16,7 +16,10 @@ cont++;
 }
 for (a = cont; a >= 0; a--)
 {
+if (s[a] != '\0')
+{
 _putchar(s[a]);
+}
 }
 _putchar('\n');
 }
