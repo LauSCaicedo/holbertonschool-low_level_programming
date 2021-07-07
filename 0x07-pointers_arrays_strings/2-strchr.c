@@ -4,7 +4,7 @@
  * *_strchr - Function for localizacted a character.
  * @s: Pointer with the place of work.
  * @c: variable for caracter.
- * Return: Always 0.
+ * Return: s or 0.
  */
 
 char *_strchr(char *s, char c)
@@ -17,5 +17,5 @@ if (s[a] == c)
 return (s + a);
 }
 }
-return ('\0');
+return (0);
 }
