@@ -15,9 +15,10 @@ char *_strstr(char *haystack, char *needle)
 	{
 		for (z = 0; needle[z] != '\0'; z++)
 		{
-			if (haystack[x] < needle[z])
+			if (haystack[x] == needle[z])
 			{
 				return (needle);
+				z--;
 			}
 		}
 	}
