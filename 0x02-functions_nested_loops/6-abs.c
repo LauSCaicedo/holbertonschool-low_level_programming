@@ -1,14 +1,15 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
+ * _abs - Function for computes the absolute value of an integer.
+ * @n: Random number.
  * Return: Always 0.
  */
 
 int _abs(int n)
 {
 	int op;
+
 	if (n > 0)
 	{
 		return (n);
