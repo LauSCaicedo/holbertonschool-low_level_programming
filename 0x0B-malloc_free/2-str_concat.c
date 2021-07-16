@@ -16,18 +16,14 @@ char *str_concat(char *s1, char *s2)
 	int po, r, s;
 	char *twos;
 
-	if (s1 == NULL && s2 == NULL)
+	if (s1 == NULL)
 	{
-		return (NULL);
+		s1 = "";
 	}
 
-	if (s1 != NULL && s2 == NULL)
+	if (s2 == NULL)
 	{
-		return (NULL);
-	}
-	if (s1 == NULL && s2 != NULL)
-	{
-		return (NULL);
+		s2 = "";
 	}
 
 	x = strlen(s1);
@@ -35,6 +31,10 @@ char *str_concat(char *s1, char *s2)
 	po = x + z;
 
 	twos = malloc((sizeof(char) * po) + 1);
+	if (twos == 0)
+	{
+		return (NULL);
+	}
 	for (r = 0; r < x; r++)
 	{
 		twos[r] = s1[r];
