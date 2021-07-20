@@ -14,21 +14,29 @@ int **alloc_grid(int width, int height)
 	int f, c;
 	int **twoS = NULL;
 
-	twoS = malloc(sizeof(int *) * height);
-	if (!twoS)
+	if (height <= 0 || width <= 0)
 	{
 		return (NULL);
 	}
-	for (f = 0; f < height; f++)
+	else
 	{
-		twoS[f] = malloc(sizeof(int) * width);
-		if (twoS[f] == NULL)
+		twoS = malloc(sizeof(int *) * height);
+		if (!twoS)
 		{
 			return (NULL);
 		}
-		for (c = 0; c < width; c++)
+		for (f = 0; f < height; f++)
 		{
-			twoS[f][c] = 0;
+			twoS[f] = malloc(sizeof(int) * width);
+			if (twoS[f] == NULL)
+			{
+				free(twoS);
+				return (NULL);
+			}
+			for (c = 0; c < width; c++)
+			{
+				twoS[f][c] = 0;
+			}
 		}
 	}
 	return (twoS);
