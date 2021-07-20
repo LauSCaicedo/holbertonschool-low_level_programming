@@ -4,7 +4,6 @@
 /**
  * _strlen - Function for measure the spaces.
  * @str: Pointer.
- * @n: integer.
  * Return: return size of a string.
  */
 
