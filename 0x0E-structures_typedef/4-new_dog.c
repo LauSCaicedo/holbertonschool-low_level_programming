@@ -8,13 +8,13 @@
  * Return: return size of a string.
  */
 
-int _strlen(char *str, int n)
+int _strlen(char *str)
 {
-	if (!str)
-		return (0);
-	if (str[n] == '\0')
-		return (n);
-	return (_strlen(str, ++n));
+	int index = 0;
+
+	for (; str[index] != '\0'; index++)
+		;
+	return (index);
 }
 /**
  * fill_in - Function for fill in dest from src.
@@ -30,6 +30,7 @@ void fill_in(char *dest, char *src)
 	{
 		dest[index] = src[index];
 	}
+	dest[index] = '\0';
 }
 /**
  * new_dog - Function for create a new dog.
@@ -47,13 +48,20 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (!ptr_dog)
 		return (NULL);
 
-	ptr_dog->name = malloc(sizeof(char) * _strlen(name, 0));
+	ptr_dog->name = malloc(sizeof(char) * _strlen(name));
 	if (!ptr_dog->name)
+	{
+		free(ptr_dog);
 		return (NULL);
+	}
 
-	ptr_dog->owner = malloc(sizeof(char) * _strlen(owner, 0));
+	ptr_dog->owner = malloc(sizeof(char) * _strlen(owner));
 	if (!ptr_dog->owner)
+	{
+		free(ptr_dog->name);
+		free(ptr_dog);
 		return (NULL);
+	}
 
 	fill_in(ptr_dog->name, name);
 	fill_in(ptr_dog->owner, owner);
