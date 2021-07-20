@@ -23,6 +23,7 @@ int **alloc_grid(int width, int height)
 		twoS = malloc(sizeof(int *) * height);
 		if (!twoS)
 		{
+			free(twoS);
 			return (NULL);
 		}
 		for (f = 0; f < height; f++)
@@ -30,6 +31,8 @@ int **alloc_grid(int width, int height)
 			twoS[f] = malloc(sizeof(int) * width);
 			if (!twoS[f])
 			{
+				free(twoS[f]);
+				free(twoS);
 				return (NULL);
 			}
 			for (c = 0; c < width; c++)
