@@ -3,10 +3,10 @@
 #include <stdlib.h>
 
 /**
- * alloc_grid - Function for fill an array dimensional.
- * @width: Columns.
- * @height: Files.
- * Return: A double pointer.
+ * free_double_pointer - Function for free in a line.
+ * @ptr: Double pointer.
+ * @size: integer of size.
+ * Return: Nothing
  */
 
 void free_double_pointer(void **ptr, int size)
@@ -18,6 +18,13 @@ void free_double_pointer(void **ptr, int size)
 	}
 	free(ptr);
 }
+
+/**
+ * alloc_grid - Function for fill an array dimensional.
+ * @width: Columns.
+ * @height: Files.
+ * Return: A double pointer.
+ */
 
 int **alloc_grid(int width, int height)
 {
