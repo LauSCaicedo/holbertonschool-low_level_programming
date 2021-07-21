@@ -9,6 +9,16 @@
  * Return: A double pointer.
  */
 
+void free_double_pointer(void **ptr, int size)
+{
+	while (size >= 0)
+	{
+		free(ptr[size]);
+		size--;
+	}
+	free(ptr);
+}
+
 int **alloc_grid(int width, int height)
 {
 	int f, c;
@@ -23,16 +33,14 @@ int **alloc_grid(int width, int height)
 		twoS = malloc(sizeof(int *) * height);
 		if (!twoS)
 		{
-			free(twoS);
 			return (NULL);
 		}
 		for (f = 0; f < height; f++)
 		{
 			twoS[f] = malloc(sizeof(int) * width);
-			if (!twoS[f])
+			if (twoS[f] == 0)
 			{
-				free(twoS[f]);
-				free(twoS);
+				free_double_pointer((void **)twoS, f);
 				return (NULL);
 			}
 			for (c = 0; c < width; c++)
