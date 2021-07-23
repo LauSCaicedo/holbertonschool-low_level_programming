@@ -10,23 +10,20 @@
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	int ele_sedurmio = 0;
+	int numbers = 0;
 	unsigned int x = 0;
-	va_list emanuel_Vayaseadormir;
+	va_list acumulator;
 
-	va_start(emanuel_Vayaseadormir, n);
+	va_start(acumulator, n);
 	for (; x < n; x++)
 	{
-		ele_sedurmio = va_arg(emanuel_Vayaseadormir, int);
-		if (separator != NULL)
-		{
-			printf("%d", ele_sedurmio);
-		}
-		if (x < n - 1)
+		numbers = va_arg(acumulator, int);
+		printf("%d", numbers);
+		if ((x < (n - 1)) && (separator != NULL))
 		{
 			printf("%s", separator);
 		}
 	}
-	va_end(emanuel_Vayaseadormir);
+	va_end(acumulator);
 	printf("\n");
 }
