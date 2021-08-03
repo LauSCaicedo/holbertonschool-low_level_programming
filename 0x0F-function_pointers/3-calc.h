@@ -1,5 +1,6 @@
 #ifndef CALC_H
 #define CALC_H
+#define NULL ((void *)0)
 
 /* Librerías */
 
