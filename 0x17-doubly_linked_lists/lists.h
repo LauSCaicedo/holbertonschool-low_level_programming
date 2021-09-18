@@ -1,5 +1,6 @@
 #ifndef LISTS_H
 #define LISTS_H
+#define NULL ((void *)0)
 
 #include <stdlib.h>
 #include <string.h>
