@@ -9,18 +9,19 @@
 
 char *_strcat(char *dest, char *src)
 {
-    int a;
-    int b = 0;
-    int cont = 0;
-    for (a = 0; dest[a] != '\0'; a++)
-    {
-        cont++;
-    }
-    for (b = 0; src[b] != '\0'; b++, cont++)
-    {
-        dest[cont] = src[b];
-    }
-    return (dest);
+	int a;
+	int b = 0;
+	int cont = 0;
+
+	for (a = 0; dest[a] != '\0'; a++)
+	{
+		cont++;
+	}
+	for (b = 0; src[b] != '\0'; b++, cont++)
+	{
+		dest[cont] = src[b];
+	}
+	return (dest);
 }
 
 /**
@@ -33,21 +34,22 @@ char *_strcat(char *dest, char *src)
 
 char *_strncat(char *dest, char *src, int n)
 {
-    int a;
-    int b = 0;
-    int cont = 0;
-    for (a = 0; dest[a] != '\0'; a++)
-    {
-        cont++;
-    }
-    for (b = 0; src[b] != '\0'; b++, cont++)
-    {
-        if (b < n)
-        {
-            dest[cont] = src[b];
-        }
-    }
-    return (dest);
+	int a;
+	int b = 0;
+	int cont = 0;
+
+	for (a = 0; dest[a] != '\0'; a++)
+	{
+		cont++;
+	}
+	for (b = 0; src[b] != '\0'; b++, cont++)
+	{
+		if (b < n)
+		{
+			dest[cont] = src[b];
+		}
+	}
+	return (dest);
 }
 
 /**
@@ -60,23 +62,23 @@ char *_strncat(char *dest, char *src, int n)
 
 char *_strncpy(char *dest, char *src, int n)
 {
-    int x, z;
+	int x, z;
 
-    for (x = 0; src[x] != '\0'; x++)
-    {
-    }
-    for (z = 0; z < n; z++)
-    {
-        if (z < x)
-        {
-            dest[z] = src[z];
-        }
-        else
-        {
-            dest[z] = '\0';
-        }
-    }
-    return (dest);
+	for (x = 0; src[x] != '\0'; x++)
+	{
+	}
+	for (z = 0; z < n; z++)
+	{
+		if (z < x)
+		{
+			dest[z] = src[z];
+		}
+		else
+		{
+			dest[z] = '\0';
+		}
+	}
+	return (dest);
 }
 
 /**
@@ -88,14 +90,14 @@ char *_strncpy(char *dest, char *src, int n)
 
 int _strcmp(char *s1, char *s2)
 {
-    int x;
+	int x;
 
-    for (x = 0; *s1 && *s2 && *s1 == *s2; x++)
-    {
-        s1++;
-        s2++;
-    }
-    return (*s1 - *s2);
+	for (x = 0; *s1 && *s2 && *s1 == *s2; x++)
+	{
+		s1++;
+		s2++;
+	}
+	return (*s1 - *s2);
 }
 
 /**
@@ -108,10 +110,11 @@ int _strcmp(char *s1, char *s2)
 
 char *_memset(char *s, char b, unsigned int n)
 {
-    unsigned int a;
-    for (a = 0; a < n; a++)
-    {
-        s[a] = b;
-    }
-    return (s);
+	unsigned int a;
+
+	for (a = 0; a < n; a++)
+	{
+		s[a] = b;
+	}
+	return (s);
 }

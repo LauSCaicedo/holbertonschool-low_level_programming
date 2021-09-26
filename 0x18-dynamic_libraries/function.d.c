@@ -10,14 +10,15 @@
 
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-    unsigned int a, b;
-    b = 0;
-    for (a = 0; a < n; a++)
-    {
-        dest[b] = src[a];
-        b++;
-    }
-    return (dest);
+	unsigned int a, b;
+
+	b = 0;
+	for (a = 0; a < n; a++)
+	{
+		dest[b] = src[a];
+		b++;
+	}
+	return (dest);
 }
 
 /**
@@ -29,20 +30,20 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 
 char *_strchr(char *s, char c)
 {
-    int a, x;
+	int a, x;
 
-    for (a = 0; s[a] != '\0'; a++)
-    {
-        a++;
-    }
-    for (x = 0; x <= a; x++)
-    {
-        if (s[x] == c)
-        {
-            return (s + x);
-        }
-    }
-    return (0);
+	for (a = 0; s[a] != '\0'; a++)
+	{
+		a++;
+	}
+	for (x = 0; x <= a; x++)
+	{
+		if (s[x] == c)
+		{
+			return (s + x);
+		}
+	}
+	return (0);
 }
 
 /**
@@ -54,19 +55,19 @@ char *_strchr(char *s, char c)
 
 unsigned int _strspn(char *s, char *accept)
 {
-    int x, z, cont = 0;
+	int x, z, cont = 0;
 
-    for (x = 0; s[x] != 32; x++)
-    {
-        for (z = 0; accept[z] != '\0'; z++)
-        {
-            if (s[x] == accept[z])
-            {
-                cont++;
-            }
-        }
-    }
-    return (cont);
+	for (x = 0; s[x] != 32; x++)
+	{
+		for (z = 0; accept[z] != '\0'; z++)
+		{
+			if (s[x] == accept[z])
+			{
+				cont++;
+			}
+		}
+	}
+	return (cont);
 }
 
 /**
@@ -79,19 +80,19 @@ unsigned int _strspn(char *s, char *accept)
 
 char *_strpbrk(char *s, char *accept)
 {
-    int x, z;
+	int x, z;
 
-    for (x = 0; s[x] != '\0'; x++)
-    {
-        for (z = 0; accept[z] != '\0'; z++)
-        {
-            if (s[x] == accept[z])
-            {
-                return (s + x);
-            }
-        }
-    }
-    return (0);
+	for (x = 0; s[x] != '\0'; x++)
+	{
+		for (z = 0; accept[z] != '\0'; z++)
+		{
+			if (s[x] == accept[z])
+			{
+				return (s + x);
+			}
+		}
+	}
+	return (0);
 }
 
 /**
@@ -103,21 +104,21 @@ char *_strpbrk(char *s, char *accept)
 
 char *_strstr(char *haystack, char *needle)
 {
-    int x, z;
+	int x, z;
 
-    if (needle == 0)
-    {
-        return (haystack);
-    }
-    for (x = 0; haystack[x] != '\0'; x++)
-    {
-        for (z = 0; needle[z] != '\0'; z++)
-        {
-            if (haystack[x] == needle[z])
-            {
-                return (needle);
-            }
-        }
-    }
-    return (0);
+	if (needle == 0)
+	{
+		return (haystack);
+	}
+	for (x = 0; haystack[x] != '\0'; x++)
+	{
+		for (z = 0; needle[z] != '\0'; z++)
+		{
+			if (haystack[x] == needle[z])
+			{
+				return (needle);
+			}
+		}
+	}
+	return (0);
 }

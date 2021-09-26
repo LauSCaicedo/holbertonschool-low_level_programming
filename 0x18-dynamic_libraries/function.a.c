@@ -10,7 +10,7 @@
 
 int _putchar(char c)
 {
-    return (write(1, &c, 1));
+	return (write(1, &c, 1));
 }
 
 /**
@@ -21,14 +21,14 @@ int _putchar(char c)
 
 int _islower(int c)
 {
-    if (c > 97 && c < 122)
-    {
-        return (1);
-    }
-    else
-    {
-        return (0);
-    }
+	if (c > 97 && c < 122)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
 
 /**
@@ -39,15 +39,15 @@ int _islower(int c)
 
 int _isalpha(int c)
 {
-    if (c >= 97 && c <= 122)
-    {
-        return (1);
-    }
-    if (c >= 65 && c <= 90)
-    {
-        return (1);
-    }
-    return (0);
+	if (c >= 97 && c <= 122)
+	{
+		return (1);
+	}
+	if (c >= 65 && c <= 90)
+	{
+		return (1);
+	}
+	return (0);
 }
 
 /**
@@ -58,21 +58,27 @@ int _isalpha(int c)
 
 int _abs(int n)
 {
-    int op;
+	int op;
 
-    if (n > 0)
-    {
-        return (n);
-    }
-    else if (n < 0)
-    {
-        op = n * -1;
-        return (op);
-    }
-    return (0);
+	if (n > 0)
+	{
+		return (n);
+	}
+	else if (n < 0)
+	{
+		op = n * -1;
+		return (op);
+	}
+	return (0);
 }
+
+/**
+ * _isupper - Function.
+ * @c: Integer.
+ * Return: Always 0.
+ */
 
 int _isupper(int c)
 {
-    (void)c;
+	(void)c;
 }
