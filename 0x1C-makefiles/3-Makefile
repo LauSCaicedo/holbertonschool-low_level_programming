@@ -18,6 +18,3 @@ fclean:
 
 re:
 	oclean all
-
-
-
