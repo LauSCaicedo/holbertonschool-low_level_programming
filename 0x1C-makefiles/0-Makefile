@@ -1,0 +1,5 @@
+TARGET = school
+OBJS = holberton.c main.c
+
+all: $(OBJS)
+	gcc $(OBJS) -o $(TARGET)
