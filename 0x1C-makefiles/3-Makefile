@@ -17,7 +17,7 @@ fclean:
 	clean oclean
 
 re:
-	$(RM) $(OBJ)
+	$(RM) $(OBJ) all
 
 
 
